@@ -1,7 +1,7 @@
 let products = ['laptop', 'mobile', 'tablet', 'monitor', 'keyboard'];
 
-// console.log(products);
-
+console.log(products);
+console.log(typeof products); //object
 
 //1. index based for loop
 for(let i = 0; i < products.length; i++){

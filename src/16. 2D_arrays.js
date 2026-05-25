@@ -1,9 +1,9 @@
 // 2D arrays
 
 let num = [
-    [1,2,3,4],
-    [10,20,30,40],
-    [100,200,300,400]
+    [1, 2, 3, 4],
+    [10, 20, 30, 40],
+    [100, 200, 300, 400]
 ];
 //3x4 matrix
 
@@ -23,18 +23,18 @@ console.log(num[0].length); // 4 (column count)
 
 console.log('--------------');
 
-for(let i=0; i<num.length; i++){
-    for(let j=0; j<num[i].length; j++){
-        process.stdout.write(num[i][j]+' ');
+for (let i = 0; i < num.length; i++) {
+    for (let j = 0; j < num[i].length; j++) {
+        process.stdout.write(num[i][j] + ' ');
     }
     console.log();
 }
 
 console.log('--------------');
 
-for(let i of num){
-    for(let j of i){
-        process.stdout.write(j+" ");
+for (let i of num) {
+    for (let j of i) {
+        process.stdout.write(j + " ");
     }
     console.log();
 }
@@ -43,15 +43,15 @@ console.log('--------------');
 
 //jagged array (different number of rows and columns)
 let data = [
-    [1,2,3,4,5],
-    [10,20,30],
-    [100,200],
+    [1, 2, 3, 4, 5],
+    [10, 20, 30],
+    [100, 200],
     [1000]
 ];
 
-for(let i of data){
-    for(let j of i){
-        process.stdout.write(j+' ');
+for (let i of data) {
+    for (let j of i) {
+        process.stdout.write(j + ' ');
     }
     console.log();
 }
@@ -63,7 +63,7 @@ console.log('--------------');
 let products = ['macbook pro', 'imac', 'iphone', 'airpods', 'macbook air'];
 
 let count = products.length - 1
-for(let i of products){
+for (let i of products) {
     i = count
     console.log(products[i]);
     count--;
@@ -75,7 +75,7 @@ console.log('--------------');
 
 
 let c = products.length - 1
-for(let i in products){
+for (let i in products) {
     i = c
     console.log(products[i]);
     c--;
@@ -85,7 +85,7 @@ for(let i in products){
 console.log('--------------');
 
 
-let numArray = [1,2,3,4];
+let numArray = [1, 2, 3, 4];
 numArray[-1] = 7;
 numArray[-100] = 77;
 

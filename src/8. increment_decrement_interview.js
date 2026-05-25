@@ -74,8 +74,8 @@ console.log('-------------');
 let bill = 1000;
 //number to String
 console.log(bill + ''); // "1000" String
-console.log(typeof (bill+'')); //string
-console.log(typeof (bill +``)); //string
+console.log(typeof (bill + '')); //string
+console.log(typeof (bill + ``)); //string
 console.log(typeof String(bill)); //string
 
 

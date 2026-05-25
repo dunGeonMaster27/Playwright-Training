@@ -17,7 +17,6 @@ console.log(y); //-99
 
 
 let num = 10;
-
 console.log(num++); //10
 console.log(num); //11
 
