@@ -38,9 +38,9 @@ function add(a, b) {
     return a + b;
 }
 
-console.log(add(1, 2));
+console.log(add(1, 2)); //3
 
-console.log(add(1, 'naveen'));
+console.log(add(1, 'naveen')); //1naveen
 
 console.log('-------------------');
 
@@ -77,4 +77,11 @@ function printing() {
     console.log('printing 2');
 }
 
+function printing(name) {
+    console.log('printing 3');
+}
+
 printing(); //SyntaxError: Identifier 'printing' has already been declared
+
+// Function Overloading is not allowed in new javascript,
+// but with older javascript(commonjs), the latest printing 3 function will be called
