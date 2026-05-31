@@ -5,7 +5,8 @@ function test() {
     console.log('hello world');
 }
 
-test();
+let t = test();
+console.log(t); //undefined (function returns undefined if no return statement)
 
 console.log('-------------------');
 

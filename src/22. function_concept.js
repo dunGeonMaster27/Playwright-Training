@@ -7,6 +7,7 @@
 function addition(x, y) {
     return x + y;
 }
+// Parameters are names in the function definition. Arguments are actual values passed when calling the function.
 
 let m1 = addition(10, 20); //call by value/ arguments
 console.log(m1); //30
@@ -25,3 +26,16 @@ console.log(m3); //hellonaveen
 // Memory gets allocated in stack while function is running,
 // once the function is completely executed, the memory will be deallocated from stack
 // As garbage collector only clears the heap memory
+
+
+// JavaScript uses two types of memory: 
+
+// - Stack: Stores primitive values(numbers, strings, booleans) and function call frames.
+// Works as LIFO (LastIn, First Out).
+
+// - Heap: Stores objects, arrays, and functions.
+// These are reference types-- the variable holds a reference(pointer) to the data in heap.
+// When a function is called, a new frame is pushed onto the call stack.
+// When the function finishes(returns), theframe is popped off the stack.
+// If too many functions call each other without returning(infinite recursion), 
+// you get a 'Maximum call stack size exceeded'error.

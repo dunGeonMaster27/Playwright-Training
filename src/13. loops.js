@@ -91,3 +91,53 @@ do {
 }
 while (p >= 1)
 
+
+
+// --------------Exercise--------------
+// 1. Write a while loop to find the sum of all numbers from 1 to 100.
+
+let i = 1;
+let sum = 0;
+while (i <= 100) {
+    sum += i;
+    i++;
+}
+console.log(sum);
+
+
+// 2. Create a for loop to print the multiplication table of 5 (5x1=5, 5x2=10, ... 5x10=50).
+for (let i = 1; i <= 10; i++) {
+    console.log(`5x${i} =`, 5 * i);
+}
+
+
+// 3. Use a do-while loop to keep asking for user input until they type "quit".
+let i = 'quit';
+do {
+    if (i === 'quit') {
+        console.log('Its correct');
+        break;
+    }
+}
+while (i != 'quit');
+
+
+// 4. Write a loop that counts how many vowels are in a given string.
+let input = 'test';
+let counter = 0;
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+for (let i of input) {
+    if (vowels.includes(i)) {
+        counter++;
+    }
+}
+console.log(`Total count of vowels: ${counter}`);
+
+
+// 5. Create a loop that reverses a number (e.g., 12345 becomes 54321).
+let input = 12345;
+let result = 0;
+for (let i = input.toString().length - 1; i >= 0; i--) {
+    result = result * 10 + +input.toString()[i];
+}
+console.log(result);
