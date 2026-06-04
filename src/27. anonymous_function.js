@@ -18,4 +18,4 @@ console.log(r1); //7
 console.log(add.name); //add
 
 
-// Advanced Version of anonymous function: Arrow Function =>
+// Advanced Version of anonymous function is Arrow Function =>

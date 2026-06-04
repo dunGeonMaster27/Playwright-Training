@@ -15,12 +15,12 @@ let pop = () => {
 pop();
 
 
-//arrow function with params
+// arrow function with params
 let printInfo = (name) => console.log(name);
 printInfo('Saket');
 
 
-//without params (can be done if 1 param)
+// without brackets (can be done if there is only 1 parameter)
 let printInfo = name => console.log(name);
 printInfo('Saket');
 
@@ -69,8 +69,3 @@ let getNameAndSalary = ({ name, salary }) => {
 };
 
 getNameAndSalary(user);
-
-
-
-
-

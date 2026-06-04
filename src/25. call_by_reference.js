@@ -15,7 +15,7 @@ function getUserDetails(userObj) {
 }
 
 getUserDetails(user); // call function by passing object reference
-
+console.log(user);
 
 // Object Destructuring Concept: getting some specific data from the object
 
