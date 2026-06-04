@@ -111,6 +111,8 @@ const title;
 console.log(title); //SyntaxError: Missing initializer in const declaration
 
 
+let text;
+console.log(text); //undefined
 
 
 // const:
@@ -130,7 +132,7 @@ console.log(title); //SyntaxError: Missing initializer in const declaration
 
 
 // Hoisting - Access a variable before declaration
-// let or const - not allowed - ReferenceError
+// let/const - not allowed - ReferenceError
 // var - allowed - undefined - no error
 
 console.log(k);

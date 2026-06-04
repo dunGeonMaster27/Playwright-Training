@@ -61,7 +61,7 @@ console.log('-------------');
 console.log(++true); //SyntaxError: Invalid left-hand side expression in prefix operation
 // console.log(12.33n); //SyntaxError: Invalid or unexpected token - A bigint literal must be an integer
 
-console.log(7n / 2n); //3.5n then removes decimal = 3n
+console.log(7n / 2n); //3n (it removes decimal)
 
 
 let pop = 10n;

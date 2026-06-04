@@ -24,6 +24,7 @@ console.log("1" + "1"); //11
 
 console.log('-----------------');
 
+//Type coercion in JavaScript is the automatic or implicit conversion of a value from one data type to another
 console.log(1 - "1"); //0
 
 console.log("5" - 2); //3
@@ -66,6 +67,7 @@ console.log('-----------------');
 
 // Unary Negative Operator (-): Converts to a number
 
+console.log("-42" + 100); //-42100
 console.log(-"42" + 100); //58
 console.log(-"130" - 20); //150
 console.log(100 - "40"); //60

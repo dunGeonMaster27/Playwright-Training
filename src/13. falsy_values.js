@@ -16,3 +16,9 @@ if (-0) {
 else {
     console.log('bye');
 }
+
+
+// Unary Operator -> Convert to number
+console.log(+true); //1
+
+console.log(+""); //0

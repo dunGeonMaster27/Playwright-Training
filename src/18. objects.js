@@ -1,8 +1,8 @@
 // Objects: Non Primitive Data Type
 // Collection of related data (key-value)
 
-// user -> object reference variable name (stored in stack of memory)
-// object with all properties(key-value) (stored in heap of memory)
+// user -> object reference variable name (stored in stack memory)
+// object with all properties(key-value) (stored in heap memory)
 
 // Stack stores primitive data types:
 // 1. number
@@ -108,7 +108,7 @@ let emp = {
     devices: ['sim', 'iphone', 'macbook']
 };
 
-console.log(emp.devices.length);
+console.log(emp.devices.length); //3
 
 let empString = JSON.stringify(emp);
 console.log(empString);

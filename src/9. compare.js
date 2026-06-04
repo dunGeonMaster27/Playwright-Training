@@ -38,6 +38,7 @@ console.log([] === ""); //false
 console.log([] == []); //false (memory address is different for both array)
 
 console.log("" == ""); //true
+console.log("" === ""); //true
 
 console.log(NaN == null); //false
 console.log(NaN == undefined); //false

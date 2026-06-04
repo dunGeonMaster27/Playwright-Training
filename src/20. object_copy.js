@@ -54,7 +54,7 @@ console.log(newCustomer);
 console.log('----------');
 
 
-newCustomer.address.flat = 102; //changes in copy object also
+newCustomer.address.flat = 102; //changes in original object also
 console.log(customer);
 console.log(newCustomer);
 
@@ -70,6 +70,5 @@ console.log('----------');
 copyCustomer.address.city = 'Pune'; //changes in copyCustomer object only
 console.log(customer); //city - Bengaluru
 console.log(copyCustomer); //city - Pune
-console.log(newCustomer); //city - Bengaluru
 
 

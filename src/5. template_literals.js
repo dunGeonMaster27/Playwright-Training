@@ -1,11 +1,11 @@
 // Template Literals: Back Tick: ``
-// String can be represented within '', "" and ```
+// String can be represented within '', "" and ``
 
 console.log(`hello`);
 
 let address = `abc building
 Bengaluru
-560102`
+560102`;
 
 console.log(address);
 

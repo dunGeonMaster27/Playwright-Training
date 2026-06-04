@@ -16,7 +16,7 @@ for(let i = 0; i < products.length; i++){
 
 console.log('-----------------');
 
-//2. for ..of loop
+//2. for ..of loop (iterates on values)
 for(let i of products){
     console.log(i);
 }

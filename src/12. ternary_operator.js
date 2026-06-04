@@ -4,14 +4,14 @@ let element = 'link';
 let action = element === 'link' ? 'click' : 'ignore';
 console.log(action); //click
 
-console.log(100, 'naveen', 12.33, true, 'IBM');
-console.log(100 + 'naveen' + 12.33 + true + 'IBM'); //concat
+console.log(100, 'naveen', 12.33, true, 'IBM'); //100 naveen 12.33 true IBM
+console.log(100 + 'naveen' + 12.33 + true + 'IBM'); //100naveen12.33trueIBM (concat)
 
 
 
 let bill = 5;
 let flag = bill >= 50 ? true : bill >= 5 ? 'hi' : 'bye';
-console.log(flag);
+console.log(flag); //hi
 
 
 

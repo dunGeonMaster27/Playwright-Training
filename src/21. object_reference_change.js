@@ -58,7 +58,7 @@ console.log('------------');
 
 
 
-// Garbage Collector picks anything with:
+// Garbage Collector picks anything from heap memory only with:
 // 1. null reference
 // 2. undefined reference
 // 3. no reference

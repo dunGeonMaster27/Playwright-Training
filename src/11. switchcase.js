@@ -26,7 +26,6 @@ switch (ch) {
     case 'u':
         console.log(`${ch} is a vowel`);
         break;
-
     default:
         console.log(`${ch} is not a vowel`);
         break;

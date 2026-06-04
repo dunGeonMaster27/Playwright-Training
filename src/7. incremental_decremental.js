@@ -70,4 +70,3 @@ console.log(rest); //-10
 
 const rest = -9;
 console.log(--rest); //TypeError: Assignment to constant variable.
-console.log(rest); //TypeError: Assignment to constant variable.

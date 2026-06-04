@@ -30,7 +30,7 @@ marks[-1] = 50; //Adds as a property of array (key and value pair)
 
 console.log(marks);
 console.log(marks[-1]); //50
-console.log(marks.length); //4
+console.log(marks.length); //4 (Properties are not counted in length)
 console.log(marks[-2]); //undefined
 
 marks[-100] = 51;
@@ -39,7 +39,7 @@ console.log(marks.length); //4
 
 marks[100] = 52;
 console.log(marks);
-console.log(marks.length); //101
+console.log(marks.length); //101 (with positive index, elements gets added in array with blanks in between)
 
 
 // string array:

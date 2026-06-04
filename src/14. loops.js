@@ -51,7 +51,7 @@ for (; ;) {
 // 6. carousel
 
 
-// for loop user cases - (when number of iterations are fixed)
+// for loop use cases - (when number of iterations are fixed)
 // 1. month dropdown jan to dec: 1 to 12
 // 2. day: 1 to 31
 // 3. array iteration
