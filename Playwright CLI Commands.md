@@ -21,6 +21,15 @@ npx playwright test --reporter=json  //Generate json report on console
 npx playwright test --reporter=junit  //Generate junit xml report on console
 npx playwright test --output=tc_results/  //Generate reports in defined folder
 
+npx playwright test --trace="on"  //Generate traces for all test cases
+npx playwright test --show-trace "trace.zip" //Opens trace file
 
 
 
+
+Browser config in playwright config ts:
+1. projects array is present with some values : run npx playwright test --browser=webkit -> Error: Cannot use --browser option when configuration file defines projects. Specify browserName in the projects instead.
+2. projects array is removed : run npx playwright test --browser=webkit -> works fine in webkit
+3. projects array length = 0 :
+run npx playwright test -> Error: No tests found
+run npx playwright test -browser=webkit -> Error: Cannot use --browser option when configuration file defines projects. Specify browserName in the projects instead.

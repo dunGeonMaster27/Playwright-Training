@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
@@ -5,21 +6,24 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 4,
   reporter: [
     ['html'],
     ['list']
   ],
 
   use: {
-    trace: 'on-first-retry',
-    headless: false
+    trace: 'retain-on-failure',
+    headless: false,
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
   },
 
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      // use: { ...devices['Desktop Chrome'], 'storageState':'states/logged_in_state.json'},
     },
 
     // {
