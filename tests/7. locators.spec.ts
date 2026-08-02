@@ -13,11 +13,18 @@ test('locators test', async ({ page }) => {
 
     // css
     // await page.locator("#input-password").fill('123');
+    // await page.pause();
+    await page.getByRole('link', { name: ' My Account', exact: true }).click();
+    await page.getByRole('link', { name: 'Logout' }).nth(0).click();
+    // await page.getByRole('link', { name: 'Logout' }).first().click();
+    // await page.getByRole('link', { name: 'Logout' }).last().click();
+
+    await page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/login');
 
     let header_value = await page.getByRole('heading', { name: 'Returning Customer', level: 2 }).textContent();
-    console.log('header-', header_value);
+    console.log('header -', header_value);
 
-    // level can be used for headings with h1, h2,.....,h6 html codes
+    // level can be used for headings with h1, h2, ....., h6 html codes
 
-
+    await page.waitForTimeout(2000);
 });

@@ -9,10 +9,10 @@ login button → Role: button + visible name: login
 forgot password link → Role: link + visible name: forgot password
 
 page.getBy methods:
-page.getByRole()
+page.getByRole
 page.getByLabel
 page.getByTitle
-page.getByAlt
+page.getByAltText
 page.getByPlaceholder
 page.getByTestId
 page.getByText
