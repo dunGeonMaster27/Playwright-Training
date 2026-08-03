@@ -74,7 +74,7 @@ test('fetch all headers text test', async ({ page }) => {
 test('test all footer links', async ({ page }) => {
     await page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/login');
 
-    let allfooters = await page.locator('//footer/div[@class="container"]/div/div/ul/li/a').all();
+    let allfooters = await page.locator('footer').getByRole('link').all();
     for (let e of allfooters) {
         console.log('text:', await e.innerText());
         await e.click();
