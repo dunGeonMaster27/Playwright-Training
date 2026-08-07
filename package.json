@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cg": "npx playwright codegen https://naveenautomationlabs.com/opencart/index.php?route=account/register"
+    "cg": "npx playwright codegen"
   },
   "keywords": [],
   "author": "Saket",
