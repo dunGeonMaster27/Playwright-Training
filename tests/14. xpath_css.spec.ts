@@ -54,7 +54,7 @@ test('locators test', async ({ page }) => {
     // #id
     // htmltag#id
     // input#input-firstname
-    
+
     // 2. class:
     // .class
     // htmltag.class
@@ -65,6 +65,10 @@ test('locators test', async ({ page }) => {
     // 3. id and class not available
     // htmltag[attr = 'value']
     // input[placeholder = 'E-Mail Address'] --css
+
+    // 4. contains
+    // input[placeholder *= 'E-Mail Address']
+
 
     // input[@placeholder = 'E-Mail Address'] --xpath
     
