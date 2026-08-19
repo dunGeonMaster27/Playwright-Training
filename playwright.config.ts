@@ -18,7 +18,8 @@ export default defineConfig({
     headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    // testIdAttribute: 'data-test-id'
+    // testIdAttribute: 'data-test-id',
+    permissions: []
   },
 
   projects: [
