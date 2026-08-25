@@ -8,6 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : 4,
   timeout: 15000,
+  // expect: {timeout: 2000},
   reporter: [
     ['html'],
     ['list']
@@ -19,7 +20,8 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     // testIdAttribute: 'data-test-id',
-    permissions: []
+    permissions: [],
+    viewport: { width: 1664, height: 1000 }
   },
 
   projects: [
