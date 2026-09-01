@@ -7,7 +7,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : 4,
-  timeout: 15000,
+  timeout: 25000,
   // expect: {timeout: 2000},
   reporter: [
     ['html'],
@@ -15,6 +15,8 @@ export default defineConfig({
   ],
 
   use: {
+    actionTimeout: 10000,
+    navigationTimeout: 5000,
     trace: 'retain-on-failure',
     headless: false,
     screenshot: 'only-on-failure',

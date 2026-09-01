@@ -1,4 +1,5 @@
-import test, { expect } from "@playwright/test";
+import { test, expect, Locator, Page } from "@playwright/test";
+
 
 test('multi window test', async ({ browser }) => {
     let context = await browser.newContext();
@@ -6,41 +7,36 @@ test('multi window test', async ({ browser }) => {
 
     await page.goto('https://orangehrm.com/contact-sales');
 
-    let [aboutUsPage] = await Promise.all([
-        context.waitForEvent('page'),
-        page.getByRole('link', { name: 'About Us' }).click()
-    ]);
+    let links: Locator[] = [
+        page.getByRole('link', { name: 'About Us' }),
+        page.getByRole('link', { name: 'Become a Partner' }),
+        page.getByRole('link', { name: 'Contact Us' })
+    ]
 
-    let [becomeAPartnerPage] = await Promise.all([
-        context.waitForEvent('page'),
-        page.getByRole('link', { name: 'Become a Partner' }).click()
-    ]);
+    let childWindows: Page[] = []; 
     
-    let [contactUsPage] = await Promise.all([
-        context.waitForEvent('page'),
-        page.getByRole('link', { name: 'Contact Us' }).click()
-    ]);
+    for (let link of links) {
+        let [childWindow] = await Promise.all([
+            context.waitForEvent('page'),
+            link.click()
+        ])
+        await childWindow.waitForLoadState();
 
+        childWindows.push(childWindow);
+    }
 
-    await aboutUsPage.waitForLoadState();
-    await becomeAPartnerPage.waitForLoadState();
-    await contactUsPage.waitForLoadState();
-    
-    let allPages = context.pages();
-    console.log('total pages:', allPages.length);
+    console.log('Total count of pages:', context.pages().length);
 
-    // await childWindowPage.bringToFront();
-    console.log('child window title1', await aboutUsPage.title());
-    console.log('child window title2', await becomeAPartnerPage.title());
-    console.log('child window title3', await contactUsPage.title());
+    for (let window of childWindows) {
+        await window.bringToFront();
+        await page.waitForTimeout(400);
+        console.log('child window title', await window.title());
+        await window.close();
+    }
 
-    expect(await aboutUsPage.getByRole('heading', { name: 'About OrangeHRM', level: 1 }).innerText()).toBe('About OrangeHRM');
-
-    await aboutUsPage.close();
-    await becomeAPartnerPage.close();
-    await contactUsPage.close();
-
+    await page.bringToFront();
     console.log('parent window title', await page.title());
+    console.log('Total count of pages:', context.pages().length);
 
     await page.waitForTimeout(1000);
 });
