@@ -75,6 +75,10 @@ test('locators test', async ({ page }) => {
     // input[placeholder = 'E-Mail Address'][name = 'email']
 
 
+    // 5. indexing
+    // .class:nth-of-type(1)
+
+
     await page.locator('input#input-firstname').fill('new Saket');
 
 
